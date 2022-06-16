@@ -15,15 +15,15 @@ public class Ex_log_02 {
 		Scanner teclado = new Scanner(System.in);
 		
 		try {
-		System.out.println("Informe um número positivo para o calculo da raiz quadrada: ");
-		float num = teclado.nextFloat();
-		
-		if(num >= 0) {
-			float res = (float) Math.sqrt(num);
-			System.out.println("A raiz quadrada de " + num + " é: " + res);
-		} else {
-			System.out.println("O número é negatico!!!");
-		}
+			System.out.println("Informe um número positivo para o calculo da raiz quadrada: ");
+			float num = teclado.nextFloat();
+			
+			if(num >= 0) {
+				float res = (float) Math.sqrt(num);
+				System.out.println("A raiz quadrada de " + num + " é: " + res);
+			} else {
+				System.out.println("O número é negatico!!!");
+			}
 		} catch(InputMismatchException e) {
 			System.out.println("Informe somente números!!!");
 		}
