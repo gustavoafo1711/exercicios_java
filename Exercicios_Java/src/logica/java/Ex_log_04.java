@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.InputMismatchException;
 
 /*
-Faça um programa que receba um número inteiro e verifique se
+5 - Faça um programa que receba um número inteiro e verifique se
 este número é par ou ímpar.
 */
 public class Ex_log_04 {

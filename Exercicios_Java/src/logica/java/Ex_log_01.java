@@ -3,7 +3,7 @@ package logica.java;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-//Faça um programa que receba dois números e mostre quel deles é o maior.
+//1 - Faça um programa que receba dois números e mostre quel deles é o maior.
 public class Ex_log_01 {
 
 	public static void main(String[] args) {
