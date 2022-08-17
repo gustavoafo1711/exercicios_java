@@ -1,5 +1,7 @@
 package logica.java;
 
+import java.util.InputMismatchException;
+
 /*
 10 - Faça um programa que receba a altura e o sexo de uma pessoa e calcule e mostre
 seu peso ideal, utilizando as seguintes fórmulas (onde h corresponde à altura):
@@ -20,23 +22,34 @@ public class Ex_log_10 {
 		
 		System.out.println("==================== PESO IDEAL ====================\n");
 		
-		System.out.println("Informe sua altura: ");
-		altura = teclado.nextFloat();
-		
-		System.out.println("Informe seu sexo. 'H' para homem, 'F' para Mulher: ");
-		genero = teclado.nextLine();
-		
-		if(genero == "H") {
-			res = (72.7f * altura) - 58;
-			System.out.println("Seu peso ideal é: " + res + " kilos");
-		} else if(genero == "F") {
-			res = (62.1f * altura) - 44.7f;
-			System.out.println("Seu peso ideal é: " + res + " kilos");
-		} else {
-			System.out.println("Informe corretamente seu genero!!!");
+		try {
+			System.out.println("Informe seu genero. 'H' para homem, 'F' para Mulher: ");
+			genero = (String) teclado.nextLine();
+			System.out.println("Informe sua altura: ");
+			altura = Float.parseFloat(teclado.nextLine()); 
+
+			
+			switch(genero) {
+			case "H":
+				res = (72.7f * altura) - 58;
+				System.out.println("Seu peso ideal é: " + res + " kilos");
+				break;
+			case "F":
+				res = (62.1f * altura) - 44.7f;
+				System.out.println("Seu peso ideal é: " + res + " kilos");
+				break;
+			default:
+				System.out.println("Informe corretamente seu genero!!!");
+			}	
+		}catch(InputMismatchException e) {
+			System.out.println("Informe um valor válido.");
 		}
 				
 		teclado.close();
+		
+	//	System.out.println("Informe sua idade: ");
+		// idade = teclado.nextInt(); //Bug
+	//	idade = Integer.parseInt(teclado.nextLine());
 	}
 	
 }
