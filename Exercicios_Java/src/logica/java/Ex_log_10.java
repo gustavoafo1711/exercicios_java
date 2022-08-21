@@ -42,7 +42,7 @@ public class Ex_log_10 {
 				System.out.println("Informe corretamente seu genero!!!");
 			}	
 		}catch(InputMismatchException e) {
-			System.out.println("Informe um valor válido.");
+			System.out.println("Informe um valor válido!!!");
 		}
 				
 		teclado.close();
