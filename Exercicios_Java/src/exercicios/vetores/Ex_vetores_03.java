@@ -23,7 +23,7 @@ public class Ex_vetores_03 {
 				System.out.println("Insira o " + (i + 1) + (char) (176) + " valor: ");
 				vetor1[i] = teclado.nextInt();
 				vetor1Quad[i] = vetor1[i] * vetor1[i];
-				;
+
 			}
 			System.out.println("A lista de Array é: " + Arrays.toString(vetor1));
 			System.out.println("A lista de Array elevado ao quadrado é: " + Arrays.toString(vetor1Quad));
